@@ -1,4 +1,5 @@
 .env
 .log
 scraper/__pycache__/
+scraper/gsc_atrical.json
 # radhe
