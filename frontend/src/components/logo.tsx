@@ -1,10 +1,10 @@
 import {Link} from "react-router-dom"
 
-export default function Logo(props: any){
+export default function Logo(){
    return (
       <Link to="/" className="flex gap-2">
          <svg
-            className={props.color + " w-6 h-6"}
+            className="text-blue-500 w-6 h-6"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -19,7 +19,7 @@ export default function Logo(props: any){
             <path d="M22 10v6" />
             <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
          </svg>
-         <span className={props.color + " text-xl font-bold"}>APPRAISE</span>
+         <span className="text-blue-500 text-xl font-bold">APPRAISE</span>
       </Link>
    )
 }

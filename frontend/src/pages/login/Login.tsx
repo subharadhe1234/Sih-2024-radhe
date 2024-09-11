@@ -16,7 +16,7 @@ export default function Login() {
       <div className="flex justify-center align-middle shrink md:grow">
         <div className="flex flex-col justify-center w-full max-w-md p-8 space-y-6 bg-white">
           <div className="flex items-center space-x-2">
-          <Logo color="text-blue-500" />
+          <Logo />
           </div>
           <h1 className="text-2xl font-bold">Welcome back!</h1>
           <p className="text-muted-foreground">Enter your Credentials to access your account</p>
