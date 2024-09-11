@@ -7,6 +7,7 @@ import App from './App.tsx'
 import Signup from './pages/sign-up/Signup'
 import Login from './pages/login/Login'
 import Welcome from './pages/welcome/Welcome'
+import FacultyDashboard from './pages/facultyDashboard/FacultyDashboard.tsx'
 
 
 // Library import
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
         <Route path="" element={<Welcome/>} />
         <Route path='login' element={<Login/>} />
         <Route path='signup' element={<Signup/>} />
+        <Route path='/facultydashboard' element={<FacultyDashboard/>} />
     </Route>
   )
 )
