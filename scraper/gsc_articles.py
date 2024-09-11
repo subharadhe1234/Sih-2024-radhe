@@ -2,6 +2,7 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
+import json
 
 # requesting to serpapi for author data
 data = requests.get(
@@ -41,6 +42,9 @@ article_link_encoded = soup.find("a", string=article_1_title)
 # print(article_link_encoded["href"])
 article_data["article_link"] = article_link_encoded["href"]
 
-print(article_data)
+# print(article_data)
+
+with open("gsc_atrical.json",'w') as file:
+    json.dump(article_data,file)
 
 driver.quit()
