@@ -1,7 +1,10 @@
+//component import
+import WelcomeHeader from "@/components/WelcomeHeader"
+
 export default function Welcome(){
    return(
       <>
-         <h1>This is Welcome page</h1>
+         <WelcomeHeader/>
       </>
    )
 }
