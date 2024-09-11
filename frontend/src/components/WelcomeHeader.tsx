@@ -10,7 +10,7 @@ export default function WelcomeHeader(){
     return(
         <>
         <div className="p-4  flex items-start justify-between">
-            <div className='mb-6 p-4'><Logo color="text-blue-500" /></div>
+            <div className='mb-6 p-4'><Logo /></div>
             <div className="flex gap-4 items-end justify-between">
              <p className="flex gap-2 items-center p-4 mr-6 cursor-pointer rounded-r-lg hover:bg-blue-50 hover:text-blue-600">Explore</p>
              <p className="flex gap-2 items-center p-4 mr-6 cursor-pointer rounded-r-lg hover:bg-blue-50 hover:text-blue-600">About</p>

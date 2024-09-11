@@ -9,6 +9,9 @@ import Login from './pages/login/Login'
 import Welcome from './pages/welcome/Welcome'
 import FacultyDashboard from './pages/facultyDashboard/FacultyDashboard.tsx'
 
+// Imports for Faculty dashboard page
+import FacultyDashboardHome from '@/components/facultyDashboardHome/FacultyDashboardHome';
+import FacultyEvents from '@/components/facultyEvents/FacultyEvents.tsx'
 
 // Library import
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
@@ -19,7 +22,10 @@ const router = createBrowserRouter(
         <Route path="" element={<Welcome/>} />
         <Route path='login' element={<Login/>} />
         <Route path='signup' element={<Signup/>} />
-        <Route path='/facultydashboard' element={<FacultyDashboard/>} />
+        <Route path='/facultydashboard/' element={<FacultyDashboard/>}>
+          <Route path="" element={<FacultyDashboardHome/>}/>
+          <Route path="events" element={<FacultyEvents/>}/>
+        </Route>
     </Route>
   )
 )

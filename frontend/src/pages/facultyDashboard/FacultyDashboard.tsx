@@ -1,33 +1,38 @@
-// Dashboard.jsx
+// Components import
 import Sidebar from '@/components/Sidebar';
 import DashboardHeader from '@/components/DashboardHeader';
-import StatCard from '@/components/StatCard';
+
+// Library import
+import { Outlet } from "react-router-dom"
+import { FaProjectDiagram, FaUserCircle, FaClipboardCheck } from 'react-icons/fa';
+import { RiHome2Line } from "react-icons/ri";
+import { BsBroadcast, BsFillCollectionPlayFill } from "react-icons/bs";
+import { FaBookBookmark, FaClipboardQuestion } from "react-icons/fa6";
+import { useState } from 'react';
 
 const FacultyDashboard = () => {
-  const statsData = {
-    journals: 126,
-    events: 26,
-    projects: 15,
-    workingHours: {
-      thisWeek: [3, 7, 4, 6, 8, 9, 5],
-      lastWeek: [4, 6, 3, 7, 8, 6, 4],
-    },
-  };
+  const [navElements, setNavElements] = useState(
+    [
+    {displayName: "Home", linkTo: "/facultydashboard/", logo: <RiHome2Line />, active: true},
+    {displayName: "Events", linkTo: "/facultydashboard/events", logo: <BsBroadcast/>, active: false},
+    {displayName: "Appraisal Form", linkTo: "/facultydashboard/appraisalform", logo: <FaClipboardCheck />, active: false},
+    {displayName: "Lectures", linkTo: "/facultydashboard/lectures", logo: <BsFillCollectionPlayFill />, active: false},
+    {displayName: "Projects", linkTo: "/facultydashboard/projects", logo: <FaProjectDiagram />, active: false},
+    {displayName: "Research", linkTo: "/facultydashboard/research", logo: <FaBookBookmark />, active: false},
+    {displayName: "View Profile", linkTo: "/facultydashboard/viewprofile", logo: <FaUserCircle />, active: false},
+    {displayName: "Status", linkTo: "/facultydashboard/status", logo: <FaClipboardQuestion />, active: false},
+  ]);
 
   return (
-    <div className="flex bg-muted">
-      <Sidebar />
+    <div className="flex bg-muted h-screen">
+      <Sidebar navElements={navElements} />
       <div className="flex-1 p-4">
         <DashboardHeader 
           username="Subhadip" 
           message="Welcome to Faculty dashboard" 
           profileImage="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-        <div className="grid grid-cols-3 gap-4 mt-6">
-          <StatCard title="Journals" value={statsData.journals}></StatCard>
-          <StatCard title="Events" value={statsData.events}></StatCard>
-          <StatCard title="Projects" value={statsData.projects}></StatCard>
-        </div>
-        <div className="mt-8">
+        <div>
+          <Outlet context={[setNavElements]} />
         </div>
       </div>
     </div>
