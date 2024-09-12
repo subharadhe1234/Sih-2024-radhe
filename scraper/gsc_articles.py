@@ -1,5 +1,6 @@
 import requests
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import json
 
@@ -17,8 +18,9 @@ article_1_link = articles[0]["link"]
 article_1_title = articles[0]["title"]
 
 # sending a headless request from selenium to the GSC page
-options = webdriver.ChromeOptions()
-options.headless = True
+options = Options()
+options.add_argument("--headless=new")
+options.add_argument('--disable-gpu')
 driver = webdriver.Chrome(options=options)
 driver.get(article_1_link)
 html_content = driver.page_source
