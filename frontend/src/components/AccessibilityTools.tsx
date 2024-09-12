@@ -12,7 +12,7 @@ export default function AccessibilityTools(){
       console.log(fontSize);
    }, [fontSize])
    return(
-      <div className="flex bg-slate-200 rounded border border-gray-300 text-sm dark:bg-slate-900">
+      <div className="flex min-h-8 bg-slate-200 rounded border border-gray-300 text-sm dark:bg-slate-900">
          <button className="px-3 border-r rounded-l border-gray-300 hover:bg-muted" onClick={()=>setFontSize((prev: any)=> fontSize>14 ? prev-1 : prev)}>-A</button>
          <button className="px-3 border-r border-gray-300 hover:bg-muted" onClick={()=>setFontSize(16)}>A</button>
          <button className="px-3 border-r border-gray-300 hover:bg-muted" onClick={()=>setFontSize((prev: any)=> fontSize<18 ? prev+1 : prev)}>A+</button>
