@@ -9,23 +9,23 @@ import { Link } from "react-router-dom";
 export default function WelcomeHeader(){
     return(
         <>
-        <div className="p-4  flex items-start justify-between">
-            <div className='mb-6 p-4'><Logo /></div>
-            <div className="flex gap-4 items-end justify-between">
-             <p className="flex gap-2 items-center p-4 mr-6 cursor-pointer rounded-r-lg hover:bg-blue-50 hover:text-blue-600">Explore</p>
-             <p className="flex gap-2 items-center p-4 mr-6 cursor-pointer rounded-r-lg hover:bg-blue-50 hover:text-blue-600">About</p>
-             <p className="flex gap-2 items-center p-4 mr-6 cursor-pointer rounded-r-lg hover:bg-blue-50 hover:text-blue-600">Contact Us</p>
+        <div className="py-2 flex items-center justify-between bg-background">
+            <div className="ml-4"><Logo /></div>
+            <div className="flex gap-10 items-start justify-between">
+             <p className="px-4 py-2 cursor-pointer rounded-lg hover:bg-blue-50 hover:text-blue-600">Explore</p>
+             <p className="px-4 py-2 cursor-pointer rounded-lg hover:bg-blue-50 hover:text-blue-600">About</p>
+             <p className="px-4 py-2 cursor-pointer rounded-lg hover:bg-blue-50 hover:text-blue-600">Contact Us</p>
             </div>
-            <div className="flex">
-                <div className="mr-5 flex">
+            <div className="flex gap-2 mr-4 items-center">
+                <div className="">
                     <AccessibilityTools/>
-                </div>   
-                <Button className="bg-blue-700">
-                    <Link to="/login" className="text-white-500">
-                         signin
-                    </Link>
-                </Button>
-             </div>
+                </div> 
+                <Link to="/login">  
+                    <Button className="bg-blue-600 dark:text-white">
+                        Signin
+                    </Button>
+                </Link>
+            </div>
         </div>
         </>
     )  
