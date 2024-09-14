@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 //component import
 import {useTheme } from "./theme-provider";
 
-export default function AccessibilityTools(){
+function AccessibilityTools(){
    const [fontSize, setFontSize] = useState(JSON.parse(localStorage.getItem("fontSize") || "16"));
    const {theme,setTheme}=useTheme();
    useEffect(()=>{
@@ -21,3 +21,5 @@ export default function AccessibilityTools(){
       </div>
    )
 }
+
+export default AccessibilityTools;

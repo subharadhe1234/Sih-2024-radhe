@@ -11,6 +11,7 @@ import { FaBookBookmark, FaClipboardQuestion } from "react-icons/fa6";
 import { useState } from 'react';
 
 const FacultyDashboard = () => {
+  const [headerMessage, setHeaderMessage] = useState("Welcome to Faculty dashboard");
   const [navElements, setNavElements] = useState(
     [
     {displayName: "Home", linkTo: "/facultydashboard/", logo: <RiHome2Line />, active: true},
@@ -29,10 +30,10 @@ const FacultyDashboard = () => {
       <div className="flex-1 p-4">
         <DashboardHeader 
           username="Subhadip" 
-          message="Welcome to Faculty dashboard" 
+          message={headerMessage}
           profileImage="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <div>
-          <Outlet context={[setNavElements]} />
+          <Outlet context={[setNavElements, setHeaderMessage]} />
         </div>
       </div>
     </div>

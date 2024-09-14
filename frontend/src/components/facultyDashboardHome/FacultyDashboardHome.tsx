@@ -6,10 +6,11 @@ import { useOutletContext } from "react-router-dom";
 import {useEffect} from 'react'
 
 export default function FacultyDashboardHome(){
-   const [setNavElements]: any = useOutletContext();
+   const [setNavElements, setHeaderMessage]: any = useOutletContext();
 
    useEffect(()=>{
       setNavElements((prev: any)=> prev.map((e: any)=> ({...e, active: e.displayName === "Home" ? true: false})))
+      setHeaderMessage("Welcome to Faculty dashboard")
    }, [])
 
    const statsData = {
