@@ -2,6 +2,7 @@
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+// Icon import
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 // Component import

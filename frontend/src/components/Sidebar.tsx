@@ -1,8 +1,12 @@
 // Components import
 import Logo from './logo';
+// Interface import
+import { NavElements } from '@/lib';
+// Library import
 import { Link } from 'react-router-dom';
 
-const Sidebar = ({navElements} : any) => {
+
+const Sidebar: React.FC<{navElements: NavElements[]}> = ({navElements}) => {
 
   return (
     <div className="w-64 h-full bg-white shadow-lg rounded-r-xl flex flex-col dark:bg-slate-900">

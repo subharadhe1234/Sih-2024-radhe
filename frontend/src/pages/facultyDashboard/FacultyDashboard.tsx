@@ -1,17 +1,20 @@
 // Components import
 import Sidebar from '@/components/Sidebar';
 import DashboardHeader from '@/components/DashboardHeader';
-
-// Library import
-import { Outlet } from "react-router-dom"
+// Icon import
 import { FaProjectDiagram, FaUserCircle, FaClipboardCheck } from 'react-icons/fa';
 import { RiHome2Line } from "react-icons/ri";
 import { BsBroadcast, BsFillCollectionPlayFill } from "react-icons/bs";
 import { FaBookBookmark, FaClipboardQuestion } from "react-icons/fa6";
+// Library import
+import { Outlet } from "react-router-dom"
 import { useState } from 'react';
+// Interface import
+import { NavElements } from '@/lib';
 
 const FacultyDashboard = () => {
-  const [navElements, setNavElements] = useState(
+  const [headerMessage, setHeaderMessage] = useState<string>("Welcome to Faculty dashboard");
+  const [navElements, setNavElements] = useState<NavElements[]>(
     [
     {displayName: "Home", linkTo: "/facultydashboard/", logo: <RiHome2Line />, active: true},
     {displayName: "Events", linkTo: "/facultydashboard/events", logo: <BsBroadcast/>, active: false},
@@ -29,10 +32,10 @@ const FacultyDashboard = () => {
       <div className="flex-1 p-4">
         <DashboardHeader 
           username="Subhadip" 
-          message="Welcome to Faculty dashboard" 
+          message={headerMessage}
           profileImage="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
         <div>
-          <Outlet context={[setNavElements]} />
+          <Outlet context={[setNavElements, setHeaderMessage]} />
         </div>
       </div>
     </div>

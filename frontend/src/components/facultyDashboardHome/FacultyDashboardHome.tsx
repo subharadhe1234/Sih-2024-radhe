@@ -5,11 +5,15 @@ import StatCard from '@/components/facultyDashboardHome/StatCard';
 import { useOutletContext } from "react-router-dom";
 import {useEffect} from 'react'
 
+// Interface import
+import { NavElements, FacultyDashboardPageMethos } from "@/lib";
+
 export default function FacultyDashboardHome(){
-   const [setNavElements]: any = useOutletContext();
+   const [setNavElements, setHeaderMessage]: FacultyDashboardPageMethos = useOutletContext();
 
    useEffect(()=>{
-      setNavElements((prev: any)=> prev.map((e: any)=> ({...e, active: e.displayName === "Home" ? true: false})))
+      setNavElements((prev: NavElements[])=> prev.map((e: NavElements)=> ({...e, active: e.displayName === "Home" ? true: false})))
+      setHeaderMessage("Welcome to Faculty dashboard")
    }, [])
 
    const statsData = {
