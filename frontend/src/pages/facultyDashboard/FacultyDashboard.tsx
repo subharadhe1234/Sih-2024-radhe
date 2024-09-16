@@ -1,18 +1,20 @@
 // Components import
 import Sidebar from '@/components/Sidebar';
 import DashboardHeader from '@/components/DashboardHeader';
-
-// Library import
-import { Outlet } from "react-router-dom"
+// Icon import
 import { FaProjectDiagram, FaUserCircle, FaClipboardCheck } from 'react-icons/fa';
 import { RiHome2Line } from "react-icons/ri";
 import { BsBroadcast, BsFillCollectionPlayFill } from "react-icons/bs";
 import { FaBookBookmark, FaClipboardQuestion } from "react-icons/fa6";
+// Library import
+import { Outlet } from "react-router-dom"
 import { useState } from 'react';
+// Interface import
+import { NavElements } from '@/lib';
 
 const FacultyDashboard = () => {
-  const [headerMessage, setHeaderMessage] = useState("Welcome to Faculty dashboard");
-  const [navElements, setNavElements] = useState(
+  const [headerMessage, setHeaderMessage] = useState<string>("Welcome to Faculty dashboard");
+  const [navElements, setNavElements] = useState<NavElements[]>(
     [
     {displayName: "Home", linkTo: "/facultydashboard/", logo: <RiHome2Line />, active: true},
     {displayName: "Events", linkTo: "/facultydashboard/events", logo: <BsBroadcast/>, active: false},

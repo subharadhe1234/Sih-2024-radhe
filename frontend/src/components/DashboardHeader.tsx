@@ -4,7 +4,13 @@ import AccessibilityTools from "./AccessibilityTools";
 // Library imports
 import { IoSearch } from "react-icons/io5";
 
-const DashboardHeader = ({ username, message, profileImage }: any) => {
+interface DashboardHeaderProps {
+  username: string,
+  message: string,
+  profileImage: string
+}
+
+const DashboardHeader: React.FC<DashboardHeaderProps> = ({ username, message, profileImage }) => {
    return (
      <div className="p-4 flex items-start justify-between">
        <div className="flex gap-4 items-end">
