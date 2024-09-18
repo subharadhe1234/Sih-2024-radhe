@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Sidebar: React.FC<{navElements: NavElements[]}> = ({navElements}) => {
 
   return (
-    <div className="w-64 h-full bg-white shadow-lg rounded-r-xl flex flex-col dark:bg-slate-900">
+    <div className="w-64  bg-white shadow-lg rounded-r-xl flex flex-col dark:bg-slate-900">
       <div className='mb-6 p-4'><Logo /></div>
       <ul className="">
         {navElements.map((navElement: any, idx: any)=>(

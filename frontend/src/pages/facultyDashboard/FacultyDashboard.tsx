@@ -27,7 +27,7 @@ const FacultyDashboard = () => {
   ]);
 
   return (
-    <div className="flex bg-muted h-screen">
+    <div className="flex bg-muted min-h-screen">
       <Sidebar navElements={navElements} />
       <div className="flex-1 p-4">
         <DashboardHeader 
