@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+   scroll-behavior: smooth;
+}
+
 :root{
    font-family: sans-serif;
    /* width: 100vw; */

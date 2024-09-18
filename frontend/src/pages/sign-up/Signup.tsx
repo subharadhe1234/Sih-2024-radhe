@@ -1,14 +1,20 @@
 // ShadCN import
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 // Icon import
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 // Component import
 import Logo from "@/components/logo";
 // Asset import
-import UniversityImage from "@/assets/University_of_Calcutta.jpg"
+import UniversityImage from "@/assets/University_of_Calcutta.jpg";
 // Library import
 import { Link } from "react-router-dom";
 
@@ -54,7 +60,11 @@ export default function Signup() {
           </p>
         </div>
       </div>
-      <img src={UniversityImage} alt="University" className="w-1/2 object-cover rounded-l-2xl hidden md:block" />
+      <img
+        src={UniversityImage}
+        alt="University"
+        className="w-1/2 object-cover rounded-l-2xl hidden md:block"
+      />
     </div>
-  )
+  );
 }
