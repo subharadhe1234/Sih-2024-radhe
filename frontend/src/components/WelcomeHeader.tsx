@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 export default function WelcomeHeader(){
     return(
-        <>
+        <div className="max-w-screen" >
         <div className="py-4 flex items-center justify-between bg-background">
             <div className="ml-4"><Logo /></div>
             <div className="flex gap-10 items-start justify-between">
@@ -25,7 +25,7 @@ export default function WelcomeHeader(){
                 </Link>
             </div>
         </div>
-        </>
+        </div>
     )  
 
 }
