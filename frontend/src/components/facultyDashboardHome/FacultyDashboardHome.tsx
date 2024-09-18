@@ -6,10 +6,10 @@ import { useOutletContext } from "react-router-dom";
 import {useEffect} from 'react'
 
 // Interface import
-import { NavElements, FacultyDashboardPageMethos } from "@/lib";
+import { NavElements, FacultyDashboardPageMethods } from "@/lib";
 
 export default function FacultyDashboardHome(){
-   const [setNavElements, setHeaderMessage]: FacultyDashboardPageMethos = useOutletContext();
+   const [setNavElements, setHeaderMessage]: FacultyDashboardPageMethods = useOutletContext();
 
    useEffect(()=>{
       setNavElements((prev: NavElements[])=> prev.map((e: NavElements)=> ({...e, active: e.displayName === "Home" ? true: false})))
