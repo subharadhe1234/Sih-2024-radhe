@@ -1,20 +1,20 @@
 // StatisticsGraph.jsx
-import { Line } from 'react-chartjs-2';
+import { Line } from "react-chartjs-2";
 
 const StatisticsGraph = ({ data }: any) => {
   const chartData = {
-    labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+    labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     datasets: [
       {
-        label: 'This Week',
+        label: "This Week",
         data: data.thisWeek,
-        borderColor: 'blue',
+        borderColor: "blue",
         fill: false,
       },
       {
-        label: 'Last Week',
+        label: "Last Week",
         data: data.lastWeek,
-        borderColor: 'green',
+        borderColor: "green",
         fill: false,
       },
     ],
