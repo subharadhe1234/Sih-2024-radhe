@@ -1,12 +1,13 @@
 // ShadCN import
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+// Icon import
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 // Component import
 import Logo from "@/components/logo";
 // Asset import
-import UniversityImage from "@/assets/University_of_Calcutta.jpg"
+import UniversityImage from "@/assets/University_of_Calcutta.jpg";
 // Library import
 import { Link } from "react-router-dom";
 
@@ -16,10 +17,12 @@ export default function Login() {
       <div className="flex justify-center align-middle shrink md:grow">
         <div className="flex flex-col justify-center w-full max-w-md p-8 space-y-6 bg-white">
           <div className="flex items-center space-x-2">
-          <Logo color="text-blue-500" />
+            <Logo />
           </div>
           <h1 className="text-2xl font-bold">Welcome back!</h1>
-          <p className="text-muted-foreground">Enter your Credentials to access your account</p>
+          <p className="text-muted-foreground">
+            Enter your Credentials to access your account
+          </p>
           <div className="space-y-6">
             <Input type="email" placeholder="Enter your email" />
             <Input type="password" placeholder="Enter your password" />
@@ -43,7 +46,11 @@ export default function Login() {
           </p>
         </div>
       </div>
-      <img src={UniversityImage} alt="University" className="w-1/2 object-cover rounded-l-2xl hidden md:block" />
+      <img
+        src={UniversityImage}
+        alt="University"
+        className="w-1/2 object-cover rounded-l-2xl hidden md:block"
+      />
     </div>
-  )
+  );
 }
